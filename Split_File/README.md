@@ -69,14 +69,3 @@ gcc -o file_splitter file_splitter.c
 - The program assumes that the input file can fit into memory and that each partition is smaller than the available memory.
 - The partition size calculation does not handle very small files or cases where the file size is not evenly divisible by the number of partitions.
 
-## Author
-
-This program was written by [Your Name].
-
-## License
-
-This program is licensed under the [Your License Name] License.
-
----
-
-Feel free to customize the README according to your specific needs or additional features of the program.
