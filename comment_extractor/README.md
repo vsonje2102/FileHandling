@@ -1,6 +1,5 @@
 Sure! Here’s a README file that describes both versions of the code, highlighting their functionality and differences:
 
-```markdown
 # Comment Extraction Programs
 
 This repository contains two C programs for extracting comments from a source file. Both programs read comments from an input file and write them to an output file. The difference between the two programs is in how they handle comments and delimiters.
@@ -13,7 +12,7 @@ This program extracts comments from a source file but does not handle nested com
 
 Compile the program:
 
-```
+
 ```sh
 gcc -o extract_comments_basic extract_comments_basic.c
 ```
@@ -81,8 +80,5 @@ Execute the compiled program with the appropriate input and output files:
 
 - Ensure that your source files are correctly formatted and comments are properly closed.
 - The enhanced program is recommended if you need to handle nested comments.
-
-For any issues or questions, please refer to the respective source files or contact the author.
-```
 
 This README provides a clear overview of both programs, their usage, and their limitations. It also includes common instructions for compilation and running the programs.
