@@ -12,6 +12,8 @@ This program extracts comments from a source file but does not handle nested com
 ### Usage
 
 Compile the program:
+
+```
 ```sh
 gcc -o extract_comments_basic extract_comments_basic.c
 ```
