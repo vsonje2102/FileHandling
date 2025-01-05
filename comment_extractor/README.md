@@ -1,5 +1,3 @@
-Sure! Here’s a README file that describes both versions of the code, highlighting their functionality and differences:
-
 # Comment Extraction Programs
 
 This repository contains two C programs for extracting comments from a source file. Both programs read comments from an input file and write them to an output file. The difference between the two programs is in how they handle comments and delimiters.
@@ -81,4 +79,4 @@ Execute the compiled program with the appropriate input and output files:
 - Ensure that your source files are correctly formatted and comments are properly closed.
 - The enhanced program is recommended if you need to handle nested comments.
 
-This README provides a clear overview of both programs, their usage, and their limitations. It also includes common instructions for compilation and running the programs.
+
