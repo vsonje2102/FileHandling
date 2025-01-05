@@ -1,63 +1,62 @@
 
+# Line Filter Program
 
-### **FileHandling**
+## Overview
 
-`FileHandling` is a collection of utilities for handling various file operations, including extracting comments, merging files, and splitting files. This project is implemented in C, and each utility is designed to perform a specific file-handling task efficiently.
+This program reads lines from a specified input file, filters the lines based on multiple conditions, and then prints the remaining lines to the console. The filtering conditions are provided in the code and applied sequentially. The program uses a linked list to store and manipulate the lines from the file.
 
----
+## Why Linked List?
 
-#### **Contents**
+A linked list is used instead of an array for several reasons:
+- **Dynamic Size**: Unlike arrays, linked lists can dynamically adjust their size, which is useful when the number of lines in the file is unknown beforehand.
+- **Efficient Deletion**: Deleting elements (lines) in a linked list is more efficient compared to arrays, especially when deleting elements in the middle of the list. This is because linked lists do not require shifting elements as arrays do.
+- **Memory Management**: Linked lists can help manage memory more efficiently, as nodes are allocated as needed.
 
-1. **comment_extractor**  
-   - Extracts comments from C source files.
-   - Files:
-     - `extract_comments.c`: Core logic for extracting comments.
-     - `README.md`: Instructions specific to this utility.
+## Compilation
 
-2. **commment_extractor** (note: typo in directory name?)  
-   - Handles nested comments and provides extracted outputs.
-   - Files:
-     - `extracted_nestedComment.c`: Logic for handling nested comments.
+To compile the program, use the provided `Makefile`:
 
-3. **Merge_File**  
-   - Merges multiple text files into a single file.
-   - Files:
-     - `fileMerge.c`: Main code for file merging.
-     - `README.md`: Documentation for usage.
+1. Run `make` to build the program:
 
-4. **Split_File**  
-   - Splits a large text file into smaller parts.
-   - Files:
-     - `README.md`: Instructions for this utility.
+    ```sh
+    make
+    ```
 
----
+2. To clean up the generated files, use:
 
-#### **How to Use**
+    ```sh
+    make clean
+    ```
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Navigate to the desired utility folder, e.g., `comment_extractor`:
-   ```bash
-   cd FileHandling/comment_extractor
-   ```
-3. Compile the C code using `gcc`:
-   ```bash
-   gcc extract_comments.c -o extract_comments
-   ```
-4. Run the utility:
-   ```bash
-   ./extract_comments <input_file>
-   ```
+## Usage
 
----
+Run the program with the following command:
 
-#### **Future Improvements**
+```sh
+./ass3  <input_file>
+```
 
-- Standardize directory names (`commment_extractor`).
-- Add comprehensive examples for each utility.
-- Provide cross-platform support.
+Replace `<input_file>` with the path to your input file. The program will read the file, filter the lines based on predefined conditions, and print the remaining lines.
 
----
+## Program Details
 
+### Input File
+
+The input file should contain lines of text. Each line will be stored in a linked list node.
+
+### Filtering Conditions
+
+The program applies the following conditions to filter the lines:
+1. Lines containing `"MSc"` are retained.
+2. Lines containing `"2024"` are retained.
+3. Lines containing `"Female"` are retained.
+
+Lines not matching any of these conditions are removed from the list.
+
+### Code Structure
+
+- `Node`: A structure representing a node in the linked list, containing a line of text and a pointer to the next node.
+- `conditionCheck()`: A function that filters the linked list based on a given condition.
+- `freeList()`: A function that frees the memory allocated for the linked list.
+
+-------------------------------------------------------------------------------------------------------------------------------
